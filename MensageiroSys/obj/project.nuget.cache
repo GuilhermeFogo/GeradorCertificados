@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3qmfOWxAN/pxZM+n0FyfX/7E1Hb2QgZcsgdVcHWtTalgl/O0lz2QmkhPf3qhE3oZQESi4Ma46Eg3/OCK78Cp6A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Guilherme\\source\\repos\\MensageiroSys\\MensageiroSys.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Guilherme\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

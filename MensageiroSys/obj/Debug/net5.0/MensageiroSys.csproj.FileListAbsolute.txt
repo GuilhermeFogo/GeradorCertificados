@@ -1,0 +1,11 @@
+C:\Users\Guilherme\source\repos\MensageiroSys\bin\Debug\net5.0\MensageiroSys.deps.json
+C:\Users\Guilherme\source\repos\MensageiroSys\bin\Debug\net5.0\MensageiroSys.dll
+C:\Users\Guilherme\source\repos\MensageiroSys\bin\Debug\net5.0\ref\MensageiroSys.dll
+C:\Users\Guilherme\source\repos\MensageiroSys\bin\Debug\net5.0\MensageiroSys.pdb
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.AssemblyInfoInputs.cache
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.AssemblyInfo.cs
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.dll
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\ref\MensageiroSys.dll
+C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.pdb

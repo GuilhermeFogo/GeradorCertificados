@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programateste", "Programateste.csproj", "{86A58CA5-F941-4D2E-89C7-AC00C2165F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MensageiroSys", "..\MensageiroSys\MensageiroSys.csproj", "{F1A3C231-A918-420D-AF13-ECB44CC02309}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86A58CA5-F941-4D2E-89C7-AC00C2165F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A58CA5-F941-4D2E-89C7-AC00C2165F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A58CA5-F941-4D2E-89C7-AC00C2165F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A58CA5-F941-4D2E-89C7-AC00C2165F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A3C231-A918-420D-AF13-ECB44CC02309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A3C231-A918-420D-AF13-ECB44CC02309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A3C231-A918-420D-AF13-ECB44CC02309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A3C231-A918-420D-AF13-ECB44CC02309}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AC48C18-8ABA-4525-B101-DAB6DE609B95}
+	EndGlobalSection
+EndGlobal
