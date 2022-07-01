@@ -1,5 +1,5 @@
 # GeradorCertificados
-Programa criado para estudo de caso: aprendizagemana manipulação de documentos word  para PDF usando C#
+Programa criado para estudo de caso: aprendizagema na manipulação de documentos word para PDF usando C#
 
 Detalhe importante o nome do arquivo do word deve ser sempre: 
 Modelo do word:
