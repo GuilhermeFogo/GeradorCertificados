@@ -9,3 +9,15 @@ C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.csp
 C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.dll
 C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\ref\MensageiroSys.dll
 C:\Users\Guilherme\source\repos\MensageiroSys\obj\Debug\net5.0\MensageiroSys.pdb
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\bin\Debug\net5.0\MensageiroSys.deps.json
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\bin\Debug\net5.0\MensageiroSys.dll
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\bin\Debug\net5.0\MensageiroSys.pdb
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.csproj.AssemblyReference.cache
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.GeneratedMSBuildEditorConfig.editorconfig
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.AssemblyInfoInputs.cache
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.AssemblyInfo.cs
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.csproj.CoreCompileInputs.cache
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.dll
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\refint\MensageiroSys.dll
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\MensageiroSys.pdb
+C:\BUGS\Prog RH Certificados\GeradorCertificados-main\GeradorCertificados-main\MensageiroSys\obj\Debug\net5.0\ref\MensageiroSys.dll

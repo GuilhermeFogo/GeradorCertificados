@@ -64,35 +64,43 @@ namespace Programateste
                 Console.WriteLine("Gerando arquivos Word");
                 Console.WriteLine("================================================");
 
+
+                try
+                {
+                    Directory.Delete($"{diretoriobase}/pdf", true);
+                    Directory.Delete($"{diretoriobase}/word", true);
+                    Directory.CreateDirectory($"{diretoriobase}/pdf");
+                    Directory.CreateDirectory($"{diretoriobase}/word");
+                }
+                catch (Exception e)
+                {
+                    Directory.CreateDirectory($"{diretoriobase}/pdf");
+                    Directory.CreateDirectory($"{diretoriobase}/word");
+                }
+
+
                 certificados.ForEach(x =>
                 {
                     Words words = new Words($"{x.Nome}", diretoriobase);
                     words.CriandoCertificado(x.ToString());
                 });
 
-                Console.WriteLine("================================================");
-                Console.WriteLine("Transformando Word em PDF");
-                Console.WriteLine("================================================");
+                //Console.WriteLine("================================================");
+                //Console.WriteLine("Transformando Word em PDF");
+                //Console.WriteLine("================================================");
 
-                try
-                {
-                    Directory.Delete($"{diretoriobase}/pdf", true);
-                    Directory.CreateDirectory($"{diretoriobase}/pdf");
-                }
-                catch (Exception e)
-                {
-                    Directory.CreateDirectory($"{diretoriobase}/pdf");
-                }
-                IMensageiro mensageiro = new Mensageiro();
-                certificados.ForEach(x =>
-                {
-                    Words words = new Words($"{x.Nome}", diretoriobase);
-                    words.WordToPDF();
-                    //string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
-                    //string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
-                    //Console.WriteLine($"Enviando e-mail para:{x.Email}");
-                    //mensageiro.EnviarEmailHTML(x.Email, assunto, mensagem, diretoriobase + $"{x.Nome}.pdf");
-                });
+
+
+                //IMensageiro mensageiro = new Mensageiro();
+                //certificados.ForEach(x =>
+                //{
+                //    Words words = new Words($"{x.Nome}", diretoriobase);
+                //    words.WordToPDF();
+                //    //string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
+                //    //string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
+                //    //Console.WriteLine($"Enviando e-mail para:{x.Email}");
+                //    //mensageiro.EnviarEmailHTML(x.Email, assunto, mensagem, diretoriobase + $"{x.Nome}.pdf");
+                //});
             }
             else
             {
@@ -105,14 +113,26 @@ namespace Programateste
             var certificados = new List<Certificado>();
             try
             {
-                xls = new XLWorkbook(diretoriobase + "MALA DIRETA1.xlsx");
+                var caminho_full = diretoriobase + "MALA DIRETA1.xlsx";
+                xls = new XLWorkbook(caminho_full);
                 var planilha = xls.Worksheets.First(w => w.Name == "Publico");
                 var totalLinhas = planilha.Rows().Count();
                 // primeira linha é o cabecalho
-                for (int l = 2; l < totalLinhas; l++)
+                for (int l = 1; l <= totalLinhas; l++)
                 {
                     if(planilha.Cell($"A{l}").Value !=null || !planilha.Cell($"A{l}").Value.Equals(""))
                     {
+                        if (planilha.Cell($"A{l}").Value.ToString() == "ALUNOS")
+                        {
+                            continue;
+                        }
+                        var nome = planilha.Cell($"A{l}").Value.ToString();
+                        var curso = planilha.Cell($"B{l}").Value.ToString();
+                        var data = planilha.Cell($"C{l}").Value.ToString();
+                        var cargahoraria = planilha.Cell($"D{l}").Value.ToString();
+                        var palestrante = planilha.Cell($"E{l}").Value.ToString();
+                        var email = planilha.Cell($"F{l}").Value.ToString();
+
                         var certificado = new Certificado
                         {
                             Nome = planilha.Cell($"A{l}").Value.ToString(),

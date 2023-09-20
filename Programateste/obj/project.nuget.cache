@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tAq0NXg3oVvP8Dcccbh1j9PvYQPzlnYtH5UIIxQmR8L5aqeJ/E/xpPocKTV/xbq02QkT0tO6t5lG07yrbBNgsQ==",
+  "dgSpecHash": "Wf+Wm969Yh53XQQea51KMgpRifhF+bjScX2St0EfTTiMtZ4iI5fjmzxAGVS4i2moWphRVhadSP88tk96kdAL1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Guilherme\\source\\repos\\Programateste\\Programateste.csproj",
+  "projectFilePath": "C:\\Users\\Guilherme\\Desktop\\Projeto .net\\GeradorCertificados\\Programateste\\Programateste.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Guilherme\\.nuget\\packages\\closedxml\\0.96.0\\closedxml.0.96.0.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",

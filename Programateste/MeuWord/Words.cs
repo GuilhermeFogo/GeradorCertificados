@@ -36,7 +36,7 @@ namespace Programateste.MeuWord
                    .Replace(array[3], "campoData").Replace(array[5], "campoCarga").Replace(array[4], "campoPalestrante");
 
                 certificadoBase.MainDocumentPart.Document.InnerXml = textocertificado;
-                certificadoBase.Clone(this.Filepath2 + $"{this.NomeArquivo}.docx");
+                certificadoBase.Clone(this.Filepath2 + $"word/{this.NomeArquivo}.docx");
                 certificadoBase.MainDocumentPart.Document.InnerXml = textopadrao;
                 certificadoBase.Save();
                 certificadoBase.Close();
