@@ -21,8 +21,9 @@ def main(argumento):
     
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        argumento = sys.argv[1]
-        main(argumento)
-    else:
-        print("Nenhum argumento foi passado.")
+    try:
+        print("Informar onde o arquivo Base se encontra")
+        caminho =input("Infomr o caminho do arquivo base")
+        main(caminho)
+    except:
+        print("Erro no programa")

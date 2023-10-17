@@ -93,19 +93,21 @@ namespace Programateste
                 Console.WriteLine("Transformando Word em PDF");
                 Console.WriteLine("================================================");
 
-
-                Meupython.ExecutarScript(diretoriobase);
-
-                Thread.Sleep(900000);
-
-                Console.WriteLine("================================================");
-                Console.WriteLine("Transformação Concluida");
-                Console.WriteLine("================================================");
+                Console.WriteLine("Para continuar o programa , acesse o progrma da pasta Script python");
 
 
-                Console.WriteLine("================================================");
-                Console.WriteLine("Iniciando Dispado de E-mails");
-                Console.WriteLine("================================================");
+                // Meupython.ExecutarScript(diretoriobase);
+
+                // Thread.Sleep(900000);
+
+                // Console.WriteLine("================================================");
+                // Console.WriteLine("Transformação Concluida");
+                // Console.WriteLine("================================================");
+
+
+                // Console.WriteLine("================================================");
+                // Console.WriteLine("Iniciando Dispado de E-mails");
+                // Console.WriteLine("================================================");
 
                 // IMensageiro mensageiro = new Mensageiro();
                 // certificados.ForEach(x =>
@@ -123,24 +125,25 @@ namespace Programateste
         }
 
 
-        private static void DisparoEmail(){
+        private static void DisparoEmail()
+        {
             var certificados = TransformaExcelCertificado();
-                IMensageiro mensageiro = new Mensageiro();
+            IMensageiro mensageiro = new Mensageiro();
 
-                Console.WriteLine("Confirmando local dos disparos");  
-                diretoriobase = Console.ReadLine();
+            Console.WriteLine("Confirmando local dos disparos");
+            diretoriobase = Console.ReadLine();
 
-                Console.WriteLine("================================================");
-                Console.WriteLine("Iniciando Dispado de E-mails");
-                Console.WriteLine("================================================");
+            Console.WriteLine("================================================");
+            Console.WriteLine("Iniciando Dispado de E-mails");
+            Console.WriteLine("================================================");
 
-                certificados.ForEach(x =>
-                {
-                   string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
-                   string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
-                   mensageiro.EnviarEmailHTMLComAnexo(x.Email, assunto, mensagem, diretoriobase +$"/pdf/{x.Nome}.pdf");
-                   Console.WriteLine($"Enviando e-mail para:{x.Email}");
-                });
+            certificados.ForEach(x =>
+            {
+                string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
+                string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
+                mensageiro.EnviarEmailHTMLComAnexo(x.Email, assunto, mensagem, diretoriobase + $"/pdf/{x.Nome}.pdf");
+                Console.WriteLine($"Enviando e-mail para:{x.Email}");
+            });
         }
 
         private static List<Certificado> TransformaExcelCertificado()
