@@ -34,6 +34,9 @@ namespace Programateste
                     case "1":
                         Executar();
                         break;
+                    case "2":
+                        DisparoEmail();
+                        break;
                     default:
                         Console.WriteLine("Tente Novamente");
                         break;
@@ -99,7 +102,7 @@ namespace Programateste
                 Console.WriteLine("Transformação Concluida");
                 Console.WriteLine("================================================");
 
-                
+
                 Console.WriteLine("================================================");
                 Console.WriteLine("Iniciando Dispado de E-mails");
                 Console.WriteLine("================================================");
@@ -117,6 +120,27 @@ namespace Programateste
             {
                 Console.WriteLine("Digite o email valido");
             }
+        }
+
+
+        private static void DisparoEmail(){
+            var certificados = TransformaExcelCertificado();
+                IMensageiro mensageiro = new Mensageiro();
+
+                Console.WriteLine("Confirmando local dos disparos");  
+                diretoriobase = Console.ReadLine();
+
+                Console.WriteLine("================================================");
+                Console.WriteLine("Iniciando Dispado de E-mails");
+                Console.WriteLine("================================================");
+
+                certificados.ForEach(x =>
+                {
+                   string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
+                   string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
+                   mensageiro.EnviarEmailHTMLComAnexo(x.Email, assunto, mensagem, diretoriobase +$"/pdf/{x.Nome}.pdf");
+                   Console.WriteLine($"Enviando e-mail para:{x.Email}");
+                });
         }
 
         private static List<Certificado> TransformaExcelCertificado()
