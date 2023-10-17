@@ -9,6 +9,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Programateste.MeuWord;
 using SystemAPI.Mensagero;
+using System.Threading;
 
 namespace Programateste
 {
@@ -85,22 +86,32 @@ namespace Programateste
                     words.CriandoCertificado(x.ToString());
                 });
 
-                //Console.WriteLine("================================================");
-                //Console.WriteLine("Transformando Word em PDF");
-                //Console.WriteLine("================================================");
+                Console.WriteLine("================================================");
+                Console.WriteLine("Transformando Word em PDF");
+                Console.WriteLine("================================================");
 
 
+                Meupython.ExecutarScript(diretoriobase);
 
-                //IMensageiro mensageiro = new Mensageiro();
-                //certificados.ForEach(x =>
-                //{
-                //    Words words = new Words($"{x.Nome}", diretoriobase);
-                //    words.WordToPDF();
-                //    //string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
-                //    //string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
-                //    //Console.WriteLine($"Enviando e-mail para:{x.Email}");
-                //    //mensageiro.EnviarEmailHTML(x.Email, assunto, mensagem, diretoriobase + $"{x.Nome}.pdf");
-                //});
+                Thread.Sleep(900000);
+
+                Console.WriteLine("================================================");
+                Console.WriteLine("Transformação Concluida");
+                Console.WriteLine("================================================");
+
+                
+                Console.WriteLine("================================================");
+                Console.WriteLine("Iniciando Dispado de E-mails");
+                Console.WriteLine("================================================");
+
+                // IMensageiro mensageiro = new Mensageiro();
+                // certificados.ForEach(x =>
+                // {
+                //    string assunto = $"[{x.Curso}] Certitificado de Conclusão Mazars";
+                //    string mensagem = $"Olá {x.Nome}, aqui segue o certificado do curso: {x.Curso}";
+                //    mensageiro.EnviarEmailHTMLComAnexo(x.Email, assunto, mensagem, diretoriobase +$"/pdf/{x.Nome}.pdf");
+                //    Console.WriteLine($"Enviando e-mail para:{x.Email}");
+                // });
             }
             else
             {
@@ -120,7 +131,7 @@ namespace Programateste
                 // primeira linha é o cabecalho
                 for (int l = 1; l <= totalLinhas; l++)
                 {
-                    if(planilha.Cell($"A{l}").Value !=null || !planilha.Cell($"A{l}").Value.Equals(""))
+                    if (planilha.Cell($"A{l}").Value != null || !planilha.Cell($"A{l}").Value.Equals(""))
                     {
                         if (planilha.Cell($"A{l}").Value.ToString() == "ALUNOS")
                         {

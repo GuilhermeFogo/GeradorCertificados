@@ -45,19 +45,19 @@ namespace Programateste.MeuWord
             }
         }
 
-        public void WordToPDF()
-        {
-            string caminho = this.Filepath2 + $"{this.NomeArquivo}.docx";
-            string caminhoPDF = this.Filepath2 + $"/pdf/{this.NomeArquivo}.pdf";
+        // public void WordToPDF()
+        // {
+        //     string caminho = this.Filepath2 + $"{this.NomeArquivo}.docx";
+        //     string caminhoPDF = this.Filepath2 + $"/pdf/{this.NomeArquivo}.pdf";
 
-            Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
-            Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(caminho);
-            //Converter para PDF
-            doc.ExportAsFixedFormat(caminhoPDF, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
-            doc.Close();
-            app.Quit();
+        //     Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
+        //     Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(caminho);
+        //     //Converter para PDF
+        //     doc.ExportAsFixedFormat(caminhoPDF, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
+        //     doc.Close();
+        //     app.Quit();
 
-        }
+        // }
 
 
         //private byte[] ConvertToPDF(HttpPostedFileBase file, string ext)
